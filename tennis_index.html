@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <title>Tennis Game in JavaScript</title>
-
-    <link rel="stylesheet" type="text/css" src="style.css" />
+    <style>
+      body {
+        background-color: rgb(128, 129, 127);
+      }
+    </style>
   </head>
   <body>
     <div class="banner">
@@ -210,14 +213,14 @@
         ctx.fillText(scoreAi, cw / 2 + 60, 60);
 
         //End of game
-        if (scoreAi >= 2) {
+        if (scoreAi >= 11) {
           ctx.fillStyle = "#179ad4";
           ctx.textAlign = "left";
           ctx.fillText("Your oponent won!", cw / 2 + 20, 260);
           ballInit();
 
           //startGame()
-        } else if (scoreP >= 2) {
+        } else if (scoreP >= 11) {
           ctx.fillStyle = "#e0341e";
           ctx.textAlign = "right";
           ctx.fillText("You win!", cw / 2 - 100, 260);
@@ -233,8 +236,8 @@
         ballX = cw / 2 - ballSize / 2;
         ballY = ch / 2 - ballSize / 2;
         canvas.addEventListener("click", flag);
-        ballSpeedX = 4;
-        ballSpeedY = 4;
+        ballSpeedX = 9;
+        ballSpeedY = 9;
       }
       function startGame() {
         scoreAi = 0;
